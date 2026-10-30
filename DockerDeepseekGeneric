@@ -11,7 +11,7 @@ RUN npm install -g @deepseek-ai/dsh
 
 RUN useradd -ms /bin/bash dshuser
 USER dshuser
-WORKDIR /home/dshuser
+WORKDIR /workspace
 
 # Copy and register entrypoint script
 COPY --chown=dshuser:dshuser entrypoint-dsh-tui.sh /usr/local/bin/entrypoint.sh
